@@ -1,0 +1,13 @@
+/* Wrapper da página */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Conteúdo de séries */
+h2 {
+    margin: 40px auto;
+    color: #678eb8;
+    text-align: center;
+}

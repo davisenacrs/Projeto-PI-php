@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #c8e3fa;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #678eb8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #41648a;
+}
+
+header {
+    background-color: #385e86;
+    padding: 15px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* nav{
+    top: 0;
+    background-color: #2e4c6b;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+} */
+
+nav ul {
+    display: flex;
+    justify-content: flex-start; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul .logout {
+    margin-left: auto;  
+}
+
+nav ul li.logout a.btn-logout {
+    padding: 10px 20px;
+    background-color: #ff4d4d;   /* Cor de fundo vermelho */
+    color: white;                /* Cor do texto branco */
+    text-decoration: none;       /* Remove o sublinhado */
+    border-radius: 5px;          /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul li.logout a.btn-logout:hover {
+    background-color: #d32f2f;   /* Cor de fundo mais escura ao passar o mouse */
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #21303f;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #2e4c6b;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Remove position: fixed para evitar que o footer cubra o conteúdo */
+    position: relative;
+    margin-top: auto; /* Faz o rodapé ficar no fim da página, mas apenas quando necessário */
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #c8e3fa;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #ff4d4d; /* Cor do texto vermelha */
+    background-color: #ffe6e6; /* Fundo leve para destacar */
+    border: 1px solid #ff4d4d; /* Borda da mesma cor do texto */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0; /* Espaçamento ao redor da mensagem */
+    text-align: center; /* Centraliza o texto */
+    width: 100%;
+    max-width: 400px; /* Limita a largura da mensagem */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o bloco na página */
+}
+
+.accuracy-message {
+    color: #1322cd; 
+    background-color: #edeef7; 
+    border: 1px solid #1322cd;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0; 
+    text-align: center; 
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajusta o tamanho e centralização do contêiner da logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;               /* Mantém o contêiner em 300px */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Diminui o tamanho da imagem */
+.logo-imagem {
+    max-width: 150px;           /* Reduz a largura máxima da imagem */
+    height: auto;               /* Mantém a proporção da imagem */
+    display: block;
+}
+
+
+
