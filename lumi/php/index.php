@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Home - LUMI</title>
 </head>
 <body>
@@ -20,8 +20,10 @@
             <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
-    <!-- <div>
-        AQUI VAI A INTROduÇÂO </div>-->
+    <div>
+        <h2>Light Up My Imagination
+        </h2>
+    </div>
 
     <div class="logo">
         <img src="../img/logo.png" alt="Logo Lumi" class="logo-imagem">

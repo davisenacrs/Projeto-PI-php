@@ -24,9 +24,9 @@
 
     <h2>Crie seu cadastro:</h2>
     <form action="cadastro.php" method="post" onsubmit="return validateForm()">
-        <input type="text" name="username" placeholder="Nome de Usuário" required><br>
+        <input type="text" name="nome" placeholder="Nome" required><br>
         <input type="email" name="email" placeholder="Email" required><br>
-        <input type="password" name="password" placeholder="Senha" required><br>
+        <input type="password" name="senha" placeholder="Senha" required><br>
         <button type="submit">Cadastrar</button>
         <p>Você já possui uma conta?</p><a href="login.php">Login</a>
     </form>
@@ -35,19 +35,27 @@
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $username = $_POST['username'];
+        // Captura os dados enviados pelo formulário
+        $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa a senha
 
-        $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        // Query de inserção
+        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        if ($stmt->execute([$username, $email, $password])) {
+
+        // Verifica se a inserção foi bem-sucedida
+        if ($stmt->execute([$nome, $email, $senha])) {
             echo '<div class="accuracy-message">Usuário cadastrado com sucesso!</div>';
         } else {
-            echo '<div class="error-message">Email ou senha incorretos.</div>';
+            echo '<div class="error-message">Erro ao cadastrar o usuário. Tente novamente.</div>';
         }
     }
     ?>
+
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo Lumi" class="logo-imagem">
+    </div>
 
     <footer>
         <p>Lumi © 2024 - Todos os direitos reservados.</p>

@@ -41,9 +41,30 @@ button:hover {
     background-color: #41648a;
 }
 
+
 header {
-    background-color: #385e86;
+    display: flex;                /* Ativa o Flexbox */
+    justify-content: center;       /* Centraliza o conteúdo horizontalmente */
+    align-items: center;           /* Alinha a imagem e o texto verticalmente */
+    background-color: #385e86;     /* Cor de fundo do header */
     padding: 15px 0;
+    position: relative;            /* Para poder usar o position da imagem */
+    gap: 4rem;
+}
+
+header img {
+    border-radius: 10px;
+    background-color: #d3e3f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    width: auto;
+    transition: transform 0.35s ease-in-out; 
+    transform: scale(1); 
+}
+
+header img :hover {
+    transform: scale(1.15); 
 }
 
 header nav ul {
@@ -52,6 +73,7 @@ header nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
+
 }
 
 header nav ul li {
@@ -63,44 +85,87 @@ header nav ul li a {
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
+
 }
 
 header nav ul li a:hover {
     color: #f4f4f4;
 }
+.header .logo { /* Corrigido para incluir o ponto antes de logo */
+    border-radius: 10px;
+    background-color: #d3e3f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.35s ease-in-out; 
+    transform: scale(1); 
+}
 
-nav{
+.header .logo:hover { /* Corrigido para incluir o ponto antes de logo */
+    transform: scale(1.15); 
+}
+
+nav {
     top: 0;
     background-color: #2e4c6b;
+    height: 3rem; /* Define a altura da barra de navegação */
 }
- 
+
 nav ul {
     display: flex;
     justify-content: center;
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 100%; /* Garante que o ul ocupe toda a altura da nav */
     padding: 0;
-    margin: 20px 0;
+    margin: 0;
 }
 
 nav ul li {
     list-style: none;
+    height: 100%; /* Garante que o li ocupe toda a altura da nav */
     margin: 0 15px;
+    display: flex; /* Torna o li um flex container */
+    align-items: center; /* Centraliza o conteúdo dentro do li */
+    border-radius: 10px 10px 0 0; /* Arredonda apenas os cantos superiores */
 }
 
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 0 10px; /* Remove o padding vertical e ajusta o horizontal */
+    text-decoration: none;
+    height: 100%; /* Garante que o link ocupe toda a altura do li */
+    display: flex; /* Torna o link um flex container */
+    align-items: center; /* Centraliza verticalmente o texto do link */
+    transition: all 0.3s ease;
+}
+
+/* nav ul li a:hover {
+    background-color: #21303f;
+    border-radius: 4px;
+} */
+
 nav ul .logout {
-    margin-left: auto;  
+    margin-left: auto;
+    height: 40%; /* Garante que o botão logout ocupe a altura total da nav */
+    display: flex; /* Para centralizar o botão dentro do li */
+    align-items: center; /* Centraliza o botão verticalmente */
 }
 
 nav ul li.logout a.btn-logout {
-    padding: 10px 20px;
-    background-color: #ff4d4d;   
-    color: white;                
-    text-decoration: none;       
-    border-radius: 5px;          
-    transition: 0.3s ease; 
+    padding: 0 20px; /* Remove o padding vertical e ajusta o padding horizontal */
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.35s ease-in-out;
+    transform: scale(1);
+    height: 100%; /* Garante que o link logout ocupe toda a altura da nav */
+    display: flex; /* Para centralizar o conteúdo dentro do link */
+    align-items: center; /* Centraliza verticalmente o texto dentro do botão */
 }
 
 nav ul li.logout a.btn-logout:hover {
-    background-color: #d32f2f;   
+    background-color: #d32f2f;
+    transform: scale(1.15);
 }
 
 nav ul li a {
@@ -111,10 +176,10 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     background-color: #21303f;
     border-radius: 4px;
-}
+} */
 
 footer {
     background-color: #2e4c6b;

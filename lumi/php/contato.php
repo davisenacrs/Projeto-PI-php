@@ -29,6 +29,10 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo Lumi" class="logo-imagem">
+    </div>
+
     <footer>
         <p>Lumi © 2024 - Todos os direitos reservados.</p>
     </footer>

@@ -4,28 +4,25 @@
     min-height: 100vh;
 }
 
+body {
+    background-color: #c5d6e9;
+}
+
+.home{
+    background-color: #c5d6e9;
+}
+
+.home a{
+    color: #1a2c3d;
+}
+
 .container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
-
-.logo {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin-top: 20px;
-}
-
-.logo h2 {
-    color: #2e4c6b;
-    font-size: 24px;
-    margin-bottom: 15px;
+    
 }
 
 @media (max-width: 600px) {
