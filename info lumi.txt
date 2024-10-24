@@ -1,0 +1,5 @@
+API TMDB: https://www.themoviedb.org/settings/api
+
+phpMyAdm: http://localhost/phpmyadmin/index.php?route=/sql&server=1&db=lumi&table=filmes&pos=0
+
+pagina no chrome: http://127.0.0.1/C:/lumi/php/filmes.php
