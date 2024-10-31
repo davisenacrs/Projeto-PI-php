@@ -1,0 +1,92 @@
+/* Wrapper da página */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 40px auto;
+    color: #c5d6e9;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    margin: 40px auto;
+    color: #1a2c3d;
+    text-align: center;
+    font-size: 26px;
+}
+
+h3 {
+    margin: 40px auto;
+    color: #1a2c3d;
+    text-align: center;
+    font-size: 25px;
+}
+
+.avaliarFilmes{
+    background-color: #c5d6e9;
+}
+
+.avaliarFilmes a{
+    color: #1a2c3d;
+}
+
+
+body {
+    background-color: #c5d6e9;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+label[for="comentario"], #comentario {
+    font-family: "Poppins", sans-serif;
+    color: #678eb8;
+    font-size: 23px;
+}
+
+#comentario {
+    font-size: 13px;
+    color: #333; 
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+    resize: none;
+}
+
+label[for="nota"], #nota {
+    font-family: "Poppins", sans-serif;
+    color: #678eb8;
+    font-size: 23px;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 8px;
+}

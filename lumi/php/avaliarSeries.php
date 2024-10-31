@@ -1,5 +1,5 @@
 <?php
-include 'db.php'; // Inclui a conexão com o banco
+include 'db.php'; 
 session_start(); // Inicia a sessão para acesso ao usuário logado
 
 // Verifica se o ID da série foi passado pela URL
@@ -30,17 +30,19 @@ if (!$serie) {
     exit;
 }
 
-// Processa o formulário de avaliação quando enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comentario = $_POST['comentario'];
     $nota = $_POST['nota'];
 
-    // Insere a avaliação no banco com o ID do usuário
     $sql_insert = "INSERT INTO avaliacoes (series_id, usuario_id, comentario, avaliacao) VALUES (?, ?, ?, ?)"; // Muda a coluna para series_id
     $stmt_insert = $pdo->prepare($sql_insert);
-    $stmt_insert->execute([$id_serie, $usuario_id, $comentario, $nota]);
 
-    echo "<p>Avaliação adicionada com sucesso!</p>";
+
+    if ($stmt_insert->execute([$id_serie, $usuario_id, $comentario, $nota])) {
+        echo "<div class='accuracy-message'>Avaliação adicionada com sucesso!</div>";
+    } else {
+        echo '<div class="error-message">Erro ao adicionar a avaliação. Tente novamente.</div>';
+    }
 }
 ?>
 
@@ -48,17 +50,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/avaliarSeries.css">
+    <link rel="stylesheet" href="../css/logout.css">
     <title>Avaliação de <?php echo htmlspecialchars($serie['titulo']); ?></title>
 </head>
 <body>
-    <h1>Avaliação de <?php echo htmlspecialchars($serie['titulo']); ?></h1>
+    <header>
+        <h1>Light Up My Imagination</h1>
+        <img src="../img/logo.png" alt="Logo Lumi" class="logo-imagem">
+    </header>
+
+    <nav>
+        <ul>
+        <li class="home"><a href="home.php">Home</a></li>
+        <li class="filmes"><a href="filmes.php">Filmes</a></li>
+        <li class="series"><a href="series.php">Séries</a></li>
+        <li class="series"><a href="avaliar.php">Avaliações</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?> 
+                <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
+            <?php endif; ?>        
+        </ul>
+    </nav>
+
+    <h2>Avaliação de <?php echo htmlspecialchars($serie['titulo']); ?></h2>
     <div>
         <img src="<?php echo htmlspecialchars($serie['poster']); ?>" alt="Poster de <?php echo htmlspecialchars($serie['titulo']); ?>" class="poster">
         <p><?php echo htmlspecialchars($serie['descricao']); ?></p>
         <p><strong>Data de Lançamento:</strong> <?php echo date("d/m/Y", strtotime($serie['data_lancamento'])); ?></p>
     </div>
 
-    <h2>Deixe sua avaliação</h2>
+    <h3>Deixe sua avaliação</h3>
     <form action="" method="POST">
         <label for="comentario">Comentário:</label><br>
         <textarea name="comentario" id="comentario" required></textarea><br><br>
@@ -74,5 +96,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Enviar Avaliação</button>
     </form>
+
+    <div>
+    <footer>
+        <p>Lumi © 2024 - Todos os direitos reservados.</p>
+    </footer>
+    </div>
 </body>
 </html>
