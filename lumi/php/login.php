@@ -1,4 +1,28 @@
-<?php include('db.php'); ?>
+<?php
+session_start();
+include 'db.php'; // Conexão com o banco de dados
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Consulta o banco de dados para verificar o usuário
+    $sql = "SELECT * FROM usuarios WHERE email = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+
+    // Verifica se o usuário existe e a senha está correta
+    if ($user && password_verify($password, $user['senha'])) {
+        $_SESSION['usuario_id'] = $user['id']; // Define o ID do usuário na sessão
+        header('Location: home.php'); // Redireciona para a página inicial após o login
+        exit;
+    } else {
+        echo '<div class="error-message">Email ou senha incorretos.</div>';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,30 +51,9 @@
         <input type="email" name="email" placeholder="Email" required><br>
         <input type="password" name="password" placeholder="Senha" required><br>
         <button type="submit">Login</button>
-        <p>Você ainda não tem uma conta?</p><a href="cadastro.php">Cadastre-se</a>
+        <p>Você ainda não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
     </form>
 
-    <?php
-    session_start();
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $sql = "SELECT * FROM users WHERE email = ?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$email]);
-        $user = $stmt->fetch();
-
-        if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            header('Location: home.php');
-        } else {
-            echo '<div class="error-message">Email ou senha incorretos.</div>';
-        }
-    }
-    ?>
-    
     <div class="logo">
         <img src="../img/logo.png" alt="Logo Lumi" class="logo-imagem">
     </div>

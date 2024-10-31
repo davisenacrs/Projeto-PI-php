@@ -21,8 +21,7 @@
         </ul>
     </nav>
     <div>
-        <h2>Light Up My Imagination
-        </h2>
+        <h2>Light Up My Imagination</h2>
     </div>
 
     <div class="logo">
