@@ -30,20 +30,6 @@ if (!$serie) {
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $comentario = $_POST['comentario'];
-    $nota = $_POST['nota'];
-
-    $sql_insert = "INSERT INTO avaliacoes (series_id, usuario_id, comentario, avaliacao) VALUES (?, ?, ?, ?)"; // Muda a coluna para series_id
-    $stmt_insert = $pdo->prepare($sql_insert);
-
-
-    if ($stmt_insert->execute([$id_serie, $usuario_id, $comentario, $nota])) {
-        echo "<div class='accuracy-message'>Avaliação adicionada com sucesso!</div>";
-    } else {
-        echo '<div class="error-message">Erro ao adicionar a avaliação. Tente novamente.</div>';
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li class="home"><a href="home.php">Home</a></li>
         <li class="filmes"><a href="filmes.php">Filmes</a></li>
         <li class="series"><a href="series.php">Séries</a></li>
-        <li class="series"><a href="avaliar.php">Avaliações</a></li>
+        <li class="series"><a href="avaliacoes.php">Avaliações</a></li>
+        <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
             <?php if (isset($_SESSION['user_id'])): ?> 
                 <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
             <?php endif; ?>        
@@ -96,6 +83,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Enviar Avaliação</button>
     </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $comentario = $_POST['comentario'];
+        $nota = $_POST['nota'];
+
+        $sql_insert = "INSERT INTO avaliacoes (series_id, usuario_id, comentario, avaliacao) VALUES (?, ?, ?, ?)"; // Muda a coluna para series_id
+        $stmt_insert = $pdo->prepare($sql_insert);
+
+
+        if ($stmt_insert->execute([$id_serie, $usuario_id, $comentario, $nota])) {
+            echo "<div class='accuracy-message'>Avaliação adicionada com sucesso!</div>";
+        } else {
+            echo '<div class="error-message">Erro ao adicionar a avaliação. Tente novamente.</div>';
+        }
+    }
+    ?>
 
     <div>
     <footer>

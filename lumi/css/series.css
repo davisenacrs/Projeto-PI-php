@@ -34,3 +34,17 @@ body {
     padding: 20px;
     
 }
+
+.serie-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #c5d6e9;
+    transition: color 0s ease, transform 0.3s ease;
+    background-color: #31465a;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.serie-item a:hover {
+    transform: scale(1.05); 
+}

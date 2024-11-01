@@ -19,7 +19,7 @@
         <li class="home"><a href="home.php">Home</a></li>
         <li class="filmes"><a href="filmes.php">Filmes</a></li>
         <li class="series"><a href="series.php">Séries</a></li>
-        <li class="series"><a href="avaliacoes.php">Avaliações</a></li>
+        <li class="avaliacao"><a href="avaliacoes.php">Avaliações</a></li>
         <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
             <?php if (isset($_SESSION['user_id'])): ?> 
                 <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
@@ -41,7 +41,10 @@
     if ($stmt->rowCount() > 0) {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<div class='filme-item'>";
-            echo "<img src='" . $row["poster"] . "' alt='Poster de " . $row["titulo"] . "' class='poster'>";
+            
+            // Exibe o pôster do filme
+            echo "<img src='../img/" . $row["poster"] . "' alt='Poster de " . $row["titulo"] . "' class='poster'>";
+            
             echo "<h3>" . $row["titulo"] . "</h3>";
             echo "<p>" . $row["descricao"] . "</p>";
             echo "<p><strong>Data de Lançamento:</strong> " . date("d/m/Y", strtotime($row["data_lancamento"])) . "</p>";
@@ -54,7 +57,8 @@
     } else {
         echo "<p>Nenhum filme encontrado.</p>";
     }
-    ?>
+?>
+
 </div>
 
 

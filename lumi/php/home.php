@@ -19,13 +19,14 @@
         <li class="home"><a href="home.php">Home</a></li>
         <li class="filmes"><a href="filmes.php">Filmes</a></li>
         <li class="series"><a href="series.php">Séries</a></li>
-        <li class="series"><a href="avaliar.php">Avaliações</a></li>
+        <li class="avaliacao"><a href="avaliacoes.php">Avaliações</a></li>
         <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
             <?php if (isset($_SESSION['user_id'])): ?> 
                 <li class="logout"><a href="logout.php" class="btn-logout">Sair</a></li>
             <?php endif; ?>        
         </ul>
     </nav>
+
     <div>
        <h2>?????</h2>
     </div>
