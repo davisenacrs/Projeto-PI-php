@@ -59,15 +59,14 @@ if (!$serie) {
             <?php endif; ?>        
         </ul>
     </nav>
-
+    <div class="img">
+    <div class="avaliarseries">
     <h2>Avaliação de <?php echo htmlspecialchars($serie['titulo']); ?></h2>
-    <div>
-        <img src="<?php echo htmlspecialchars($serie['poster']); ?>" alt="Poster de <?php echo htmlspecialchars($serie['titulo']); ?>" class="poster">
-        <p><?php echo htmlspecialchars($serie['descricao']); ?></p>
-        <p><strong>Data de Lançamento:</strong> <?php echo date("d/m/Y", strtotime($serie['data_lancamento'])); ?></p>
-    </div>
+        <img src="../img/<?php echo htmlspecialchars($serie['poster']); ?>" alt="Poster de <?php echo htmlspecialchars($serie['titulo']); ?>" class="poster">
+        <p class ="descricao"><?php echo htmlspecialchars($serie['descricao']); ?></p>
+        <p class ="lancamento"><strong>Data de Lançamento:</strong> <?php echo date("d/m/Y", strtotime($serie['data_lancamento'])); ?></p>
+            </div>
 
-    <h3>Deixe sua avaliação</h3>
     <form action="" method="POST">
         <label for="comentario">Comentário:</label><br>
         <textarea name="comentario" id="comentario" required></textarea><br><br>
@@ -83,6 +82,7 @@ if (!$serie) {
 
         <button type="submit">Enviar Avaliação</button>
     </form>
+    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -1,3 +1,4 @@
+// Função para validar o formulário de login
 function validateForm() {
     const password = document.querySelector('input[name="password"]').value;
     
@@ -8,3 +9,4 @@ function validateForm() {
     
     return true;
 }
+

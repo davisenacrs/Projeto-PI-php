@@ -10,18 +10,19 @@
 <body>
 <div class="wrapper">
     <header>
-        <h1>LUMI: Cadastro</h1>
+        <nav>
+            <div class="lumi">
+                <h3>Lumi</h3>
+            </div>
+
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="contato.php">Contato</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="contato.php">Contato</a></li>
-            <li><a href="cadastro.php">Cadastro</a></li>
-            <li><a href="login.php">Login</a></li>
-        </ul>
-    </nav>
-
     <h2>Crie seu cadastro:</h2>
     <form action="cadastro.php" method="post" onsubmit="return validateForm()">
         <input type="text" name="nome" placeholder="Nome" required><br>

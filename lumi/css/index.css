@@ -4,24 +4,27 @@
     min-height: 100vh;
 }
 
+/*
+-
 .container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 50%;
-}
-
-h2 {
-    color: #2e4c6b;
-    font-size: 45px;
-    font-family: "Poppins", sans-serif;
+    width: 60px;
+    
 }
 
 .logo {
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
-    background-color: #d3e3f5;
+    background-color: #ADCBE3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.35s ease-in-out; 
@@ -30,6 +33,89 @@ h2 {
 
 .logo:hover {
     transform: scale(1.15); 
+} */
+
+/* Ajuste do contêiner principal */
+.container .logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px; /* Aumentei o padding para o dobro */
+    width: 100%; /* Agora ocupa toda a largura da tela */
+    max-width: 2000px; /* Aumentei o limite máximo para 2000px */
+}
+
+/* Ajuste da logo */
+.logoH {
+    text-align: center;
+    padding: 80px; /* Dobrei o padding para dar ainda mais espaço interno */
+    max-width: 100%; /* A logo ocupa toda a largura da tela */
+    max-height: 95vh; /* A logo ocupa até 95% da altura da tela */
+    margin-top: 60px; /* Aumentei o espaçamento superior */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px; /* Aumentei o border-radius para ajustar ao novo tamanho */
+    background-color: #ADCBE3;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Aumentei a sombra para combinar com o tamanho maior */
+    transition: transform 0.35s ease-in-out; 
+    transform: scale(1); 
+    overflow: hidden; /* Garante que o conteúdo da logo não ultrapasse os limites */
+    cursor: pointer;
+}
+
+/* Ajuste da imagem da logo */
+.logo img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner da logo */
+    height: auto; /* Mantém a proporção correta da imagem */
+    object-fit: cover; /* Corta a imagem uniformemente se necessário */
+}
+
+/* Efeito hover permanece o mesmo */
+.logo:hover {
+    transform: scale(1.15); 
+    cursor: pointer;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 60px;
+    
+}
+
+#conteudo-oculto {
+    background-color: #E3F2FD; /* Fundo claro, para combinar com o #ADCBE3 da classe logo */
+    color: #333; /* Texto em um tom escuro para contraste */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+    max-width: 80%;
+    margin: 20px auto; /* Centraliza o texto horizontalmente */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Efeito hover no conteúdo */
+#conteudo-oculto:hover {
+    background-color: #D4E4F4; /* Fundo levemente mais escuro no hover */
+}
+
+/* Títulos dentro do conteúdo oculto */
+#conteudo-oculto h2 {
+    color: #2962FF; /* Azul mais escuro para destaque */
+    margin-bottom: 10px;
+}
+
+/* Parágrafos dentro do conteúdo oculto */
+#conteudo-oculto p {
+    margin-bottom: 15px;
+    text-align: justify; /* Justifica o texto para um visual mais organizado */
 }
 
 

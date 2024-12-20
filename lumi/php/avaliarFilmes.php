@@ -58,15 +58,14 @@ if (!$filme) {
             <?php endif; ?>        
         </ul>
     </nav>
-
+    <div class="img">   
+    <div class="avaliarfilmes">
     <h2>Avaliação de <?php echo htmlspecialchars($filme['titulo']); ?></h2>
-    <div>
-        <img src="<?php echo htmlspecialchars($filme['poster']); ?>" alt="Poster de <?php echo htmlspecialchars($filme['titulo']); ?>" class="poster">
-        <p><?php echo htmlspecialchars($filme['descricao']); ?></p>
-        <p><strong>Data de Lançamento:</strong> <?php echo date("d/m/Y", strtotime($filme['data_lancamento'])); ?></p>
+        <img src="../img/<?php echo htmlspecialchars($filme['poster']); ?>" alt="Poster de <?php echo htmlspecialchars($filme['titulo']); ?>" class="poster">
+        <p class = "descricao"><?php echo htmlspecialchars($filme['descricao']); ?></p>
+        <p class ="lancamento"><strong>Data de Lançamento:</strong> <?php echo date("d/m/Y", strtotime($filme['data_lancamento'])); ?></p>
     </div>
 
-    <h3>Deixe sua avaliação</h3>
     <form action="" method="POST">
         <label for="comentario">Comentário:</label><br>
         <textarea name="comentario" id="comentario" required></textarea><br><br>
@@ -82,6 +81,7 @@ if (!$filme) {
 
         <button type="submit">Enviar Avaliação</button>
     </form>
+    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

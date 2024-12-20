@@ -34,18 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 <div class="wrapper">
     <header>
-        <h1>LUMI: Login</h1>
+        <nav>
+            <div class="lumi">
+                <h3>Lumi</h3>
+            </div>
+
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="contato.php">Contato</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="contato.php">Contato</a></li>
-            <li><a href="cadastro.php">Cadastro</a></li>
-            <li><a href="login.php">Login</a></li>
-        </ul>
-    </nav>
-
     <h2>Entre com seu Login:</h2>
     <form action="login.php" method="post">
         <input type="email" name="email" placeholder="Email" required><br>

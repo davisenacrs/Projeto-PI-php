@@ -7,34 +7,62 @@
 
 h1 {
     text-align: center;
-    color: #c8e3fa;
+    color: #e7eff6;
 }
 
 h2 {
     margin: 40px auto;
-    color: #1a2c3d;
+    color: #2a4d69;
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+    margin-left: 8rem;
+}
+
+.avaliarseries img{
+    height: 400px;
+    width: auto;
+}
+
+.avaliarseries .descricao{
+    font-size: 20px;
+}
+
+.avaliarseries .lancamento{
+    font-size: 20px;
+}
+
+.avaliarseries{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h3 {
     margin: 40px auto;
-    color: #1a2c3d;
+    color: #2a4d69;
     text-align: center;
     font-size: 25px;
 }
 
 .avaliarSeries{
-    background-color: #c5d6e9;
+    background-color: #e7eff6;
 }
 
 .avaliarSeries a{
-    color: #1a2c3d;
+    color: #2a4d69;
 }
 
 
 body {
-    background-color: #c5d6e9;
+    background-color: #e7eff6;
 }
 
 .container {
@@ -57,14 +85,14 @@ form {
 
 label[for="comentario"], #comentario {
     font-family: "Poppins", sans-serif;
-    color: #678eb8;
+    color: #2a4d69;
     font-size: 23px;
 }
 
 #comentario {
-    font-size: 13px;
+    font-size: 16px;
     color: #333; 
-    background-color: #f9f9f9;
+    background-color: #f5f8fc;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -74,7 +102,7 @@ label[for="comentario"], #comentario {
 
 label[for="nota"], #nota {
     font-family: "Poppins", sans-serif;
-    color: #678eb8;
+    color: #2a4d69;
     font-size: 23px;
 }
 
@@ -100,4 +128,21 @@ button {
     margin: 20px auto; /* Centraliza horizontalmente o elemento */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2a4d69;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Remove position: fixed para evitar que o footer cubra o conteúdo */
+    position: relative;
+    margin-top: 13%; /* Faz o rodapé ficar no fim da página, mas apenas quando necessário */
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #c8e3fa;
+    font-size: 14px;
 }

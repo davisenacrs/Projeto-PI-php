@@ -61,7 +61,7 @@
 
 </div>
 
-
+<br></br>
     <footer>
         <p>Lumi © 2024 - Todos os direitos reservados.</p>
     </footer>

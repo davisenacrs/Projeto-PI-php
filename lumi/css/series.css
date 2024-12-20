@@ -14,16 +14,16 @@ h2 {
 }
 
 .series{
-    background-color: #c5d6e9;
+    background-color: #e7eff6;
 }
 
 .series a{
-    color: #1a2c3d;
+    color: #2a4d69;
 }
 
 
 body {
-    background-color: #c5d6e9;
+    background-color: #e7eff6;
 }
 
 .container {
@@ -38,9 +38,9 @@ body {
 .serie-item a{
     text-decoration: none;
     font-size: 1rem;
-    color: #c5d6e9;
+    color: #e7eff6;
     transition: color 0s ease, transform 0.3s ease;
-    background-color: #31465a;
+    background-color: #2a4d69;
     padding: 10px;
     border-radius: 12px;
 }

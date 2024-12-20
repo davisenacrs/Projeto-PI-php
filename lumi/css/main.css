@@ -12,7 +12,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #c8e3fa;
+    color: #e7eff6;
 }
 
 form {
@@ -31,14 +31,14 @@ input, textarea {
 
 button {
     padding: 10px 20px;
-    background-color: #678eb8;
+    background-color: #63ACE5;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #41648a;
+    background-color: #2a4d69;
 }
 
 
@@ -46,7 +46,7 @@ header {
     display: flex;                /* Ativa o Flexbox */
     justify-content: center;       /* Centraliza o conteúdo horizontalmente */
     align-items: center;           /* Alinha a imagem e o texto verticalmente */
-    background-color: #385e86;     /* Cor de fundo do header */
+    background-color: #2a4d69;     /* Cor de fundo do header */
     padding: 15px 0;
     position: relative;            /* Para poder usar o position da imagem */
     gap: 4rem;
@@ -105,7 +105,7 @@ header nav ul li a:hover {
 
 nav {
     top: 0;
-    background-color: #2e4c6b;
+    background-color: #436681;
     height: 3rem; /* Define a altura da barra de navegação */
 }
 
@@ -182,8 +182,8 @@ nav ul li a {
 } */
 
 footer {
-    background-color: #2e4c6b;
-    color: white;
+    background-color: #2a4d69;
+    color: 	#e7eff6;
     text-align: center;
     padding: 20px 0; /* Remove position: fixed para evitar que o footer cubra o conteúdo */
     position: relative;
@@ -245,7 +245,7 @@ footer p {
     width: auto;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease; 
+    transition: 0.8s ease; 
 }
 
 .poster:hover{
