@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/series.css">
     <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
+    <script src="../js/style.js" defer ></script>
     <title>Séries - LUMI</title>
 </head>
 <body>
@@ -52,6 +54,8 @@
             echo "<p>Nenhuma série encontrada.</p>";
         }
         ?>
+
+<button class="btn-topo" id="btnTopo" title="Voltar ao topo">↑</button>
     </div>
 
     <footer>

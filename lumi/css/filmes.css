@@ -1,4 +1,6 @@
-/* Wrapper da página */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -47,4 +49,25 @@ body {
 
 .filme-item a:hover {
     transform: scale(1.05); 
+}
+
+.btn-topo {
+    position: fixed;
+    font-size: 1rem;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2a4d69;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 80%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: color 0s ease, transform 0.35s ease;
+    z-index: 1000;
+}
+.btn-topo:hover {
+    background-color: #1a2c3d;
+    transform: scale(1.15); 
 }

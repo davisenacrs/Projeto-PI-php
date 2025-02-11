@@ -1,0 +1,14 @@
+LUMI:
+
+- criar api do google ao entrar em contato com o site
+
+- ajustar as sinopses dos filmes e aplicar a nota média das obras decorrente das avaliações
+
+- arrumar a aba avaliações para -> Minhas Avaliações
+
+- melhorar a pagina index
+
+- adicionar conta adm:  1-) poder editar sinopses e fotos de obras
+			2-)poder excluir e criar contas 
+			3-) poder adicionar obras 
+

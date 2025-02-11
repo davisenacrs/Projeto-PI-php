@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/filmes.css">
     <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
+    <script src="../js/style.js" defer ></script>
     <title>Filmes - LUMI</title>
 </head>
 <body>
@@ -59,12 +61,13 @@
     }
 ?>
 
+<button class="btn-topo" id="btnTopo" title="Voltar ao topo">↑</button>
 </div>
 
-<br></br>
     <footer>
         <p>Lumi © 2024 - Todos os direitos reservados.</p>
     </footer>
-</div>
+
+    </div>
 </body>
 </html>

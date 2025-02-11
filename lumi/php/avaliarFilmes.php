@@ -38,6 +38,7 @@ if (!$filme) {
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/avaliarFilmes.css">
     <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <title>Avaliação de <?php echo htmlspecialchars($filme['titulo']); ?></title>
 </head>
 <body>
@@ -88,11 +89,11 @@ if (!$filme) {
         $comentario = $_POST['comentario'];
         $nota = $_POST['nota'];
 
-        $sql_insert = "INSERT INTO avaliacoes (series_id, usuario_id, comentario, avaliacao) VALUES (?, ?, ?, ?)"; // Muda a coluna para series_id
+        $sql_insert = "INSERT INTO avaliacoes (filmes_id, usuario_id, comentario, avaliacao) VALUES (?, ?, ?, ?)"; // Muda a coluna para series_id
         $stmt_insert = $pdo->prepare($sql_insert);
 
 
-        if ($stmt_insert->execute([$id_serie, $usuario_id, $comentario, $nota])) {
+        if ($stmt_insert->execute([$id_filme, $usuario_id, $comentario, $nota])) {
             echo "<div class='accuracy-message'>Avaliação adicionada com sucesso!</div>";
         } else {
             echo '<div class="error-message">Erro ao adicionar a avaliação. Tente novamente.</div>';

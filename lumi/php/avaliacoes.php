@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/avaliacoes.css">
     <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <title>Avaliações - LUMI</title>
 </head>
 <body>

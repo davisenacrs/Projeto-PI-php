@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <title>Cadastro - LUMI</title>
 </head>
 <body>

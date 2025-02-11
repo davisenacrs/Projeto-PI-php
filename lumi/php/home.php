@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/logout.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <script src="../js/validation.js" defer></script>
     <script src="../js/carousel.js" defer></script> <!-- Novo JavaScript para o carrossel -->
     <title>Home - LUMI</title>
@@ -117,12 +118,15 @@
                     echo "<a href='avaliarSeries.php?id=8'>La Casa de Papel</a>";
                   ?>
                 </h3>
-              </div>
-            </div>
+                </div>
           </div>
+        </div>
 
-      <div class="swiper-button-next swiper-navBtn1 swiper-button-next"></div>
-      <div class="swiper-button-prev swiper-navBtn1 swiper-button-prev"></div>
+
+        </div>
+        </div>
+      <div class="swiper-button-next swiper-navBtn1"></div>
+      <div class="swiper-button-prev swiper-navBtn1"></div>
       <div class="swiper-pagination pagination1"></div>
     </div>
 
@@ -217,10 +221,10 @@
 
 
         </div>
-      </div>
-      <!-- <div class="swiper-button-next swiper-navBtn2 swiper-button-next"></div>
+        </div>
+      <div class="swiper-button-next swiper-navBtn2"></div>
       <div class="swiper-button-prev swiper-navBtn2"></div>
-    <div class="swiper-pagination pagination2"></div> -->
+    <div class="swiper-pagination pagination2"></div>
   </div>
 
       <h2 class="pub">Top 10 Séries da Semana:</h2>
@@ -308,11 +312,15 @@
                     echo "<a href='avaliarSeries.php?id=15'>Ozark</a>";
                   ?>
                 </h3>
-              </div>
-            </div>
+                </div>
           </div>
-      <div class="swiper-button-next swiper-navBtn3 swiper-button-next"></div>
-      <div class="swiper-button-prev swiper-navBtn3 swiper-button-prev"></div>
+        </div>
+
+
+        </div>
+        </div>
+      <div class="swiper-button-next swiper-navBtn3"></div>
+      <div class="swiper-button-prev swiper-navBtn3"></div>
      <div class="swiper-pagination pagination3"></div>
     </div>
 
@@ -401,17 +409,17 @@
                   echo "<a href='avaliarSeries.php?id=7'>The Crown</a>";
                 ?>
               </h3>
-            </div>
+              </div>
           </div>
         </div>
 
+
         </div>
-      </div>
-      <div class="swiper-button-next swiper-navBtn4 swiper-button-next"></div>
-      <div class="swiper-button-prev swiper-navBtn4 swiper-button-prev"></div>
+        </div>
+      <div class="swiper-button-next swiper-navBtn4"></div>
+      <div class="swiper-button-prev swiper-navBtn4"></div>
       <div class="swiper-pagination pagination4"></div>
     </div>
-
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/script.js"></script>
     <br>

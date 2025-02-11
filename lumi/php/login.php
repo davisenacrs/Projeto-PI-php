@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <title>Login - LUMI</title>
 </head>
 <body>

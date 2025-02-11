@@ -39,6 +39,7 @@ if (!$serie) {
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/avaliarSeries.css">
     <link rel="stylesheet" href="../css/logout.css">
+    <link rel="icon" type="image/png" href="..img/logo.png">
     <title>Avaliação de <?php echo htmlspecialchars($serie['titulo']); ?></title>
 </head>
 <body>
