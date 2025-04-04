@@ -1,0 +1,314 @@
+*{
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #e7eff6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #63ACE5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a4d69;
+}
+
+
+header {
+    display: flex;                /* Ativa o Flexbox */
+    justify-content: center;       /* Centraliza o conteúdo horizontalmente */
+    align-items: center;           /* Alinha a imagem e o texto verticalmente */
+    background-color: #2a4d69;     /* Cor de fundo do header */
+    padding: 15px 0;
+    position: relative;            /* Para poder usar o position da imagem */
+    gap: 4rem;
+}
+
+header img {
+    border-radius: 10px;
+    background-color: #d3e3f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    width: auto;
+    transition: transform 0.35s ease-in-out; 
+    transform: scale(1); 
+}
+
+header img :hover {
+    transform: scale(1.15); 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+header nav ul li {
+    margin: 0px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+
+}
+
+header nav ul li a:hover {
+    color: #f4f4f4;
+}
+.header .logo { /* Corrigido para incluir o ponto antes de logo */
+    border-radius: 10px;
+    background-color: #d3e3f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.35s ease-in-out; 
+    transform: scale(1); 
+}
+
+.header .logo:hover { /* Corrigido para incluir o ponto antes de logo */
+    transform: scale(1.15); 
+}
+
+nav {
+    top: 0;
+    background-color: #436681;
+    height: 3rem; /* Define a altura da barra de navegação */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 100%; /* Garante que o ul ocupe toda a altura da nav */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    height: 100%; /* Garante que o li ocupe toda a altura da nav */
+    margin: 0 15px;
+    display: flex; /* Torna o li um flex container */
+    align-items: center; /* Centraliza o conteúdo dentro do li */
+    border-radius: 10px 10px 0 0; /* Arredonda apenas os cantos superiores */
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 0 10px; /* Remove o padding vertical e ajusta o horizontal */
+    text-decoration: none;
+    height: 100%; /* Garante que o link ocupe toda a altura do li */
+    display: flex; /* Torna o link um flex container */
+    align-items: center; /* Centraliza verticalmente o texto do link */
+    transition: all 0.3s ease;
+}
+
+/* nav ul li a:hover {
+    background-color: #21303f;
+    border-radius: 4px;
+} */
+
+nav ul .logout {
+    margin-left: auto;
+    height: 40%; /* Garante que o botão logout ocupe a altura total da nav */
+    display: flex; /* Para centralizar o botão dentro do li */
+    align-items: center; /* Centraliza o botão verticalmente */
+}
+
+nav ul li.logout a.btn-logout {
+    padding: 0 20px; /* Remove o padding vertical e ajusta o padding horizontal */
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.35s ease-in-out;
+    transform: scale(1);
+    height: 100%; /* Garante que o link logout ocupe toda a altura da nav */
+    display: flex; /* Para centralizar o conteúdo dentro do link */
+    align-items: center; /* Centraliza verticalmente o texto dentro do botão */
+}
+
+nav ul li.logout a.btn-logout:hover {
+    background-color: #d32f2f;
+    transform: scale(1.15);
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* nav ul li a:hover {
+    background-color: #21303f;
+    border-radius: 4px;
+} */
+
+footer {
+    background-color: #2a4d69;
+    margin-top: 3rem;
+    color: 	#e7eff6;
+    text-align: center;
+    padding: 20px 0; /* Remove position: fixed para evitar que o footer cubra o conteúdo */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #c8e3fa;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #ff4d4d; /* Cor do texto vermelha */
+    background-color: #ffe6e6; /* Fundo leve para destacar */
+    border: 1px solid #ff4d4d; /* Borda da mesma cor do texto */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0; /* Espaçamento ao redor da mensagem */
+    text-align: center; /* Centraliza o texto */
+    width: 100%;
+    max-width: 400px; /* Limita a largura da mensagem */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o bloco na página */
+}
+
+.accuracy-message {
+    color: #1322cd; 
+    background-color: #edeef7; 
+    border: 1px solid #1322cd;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0; 
+    text-align: center; 
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    text-align: center;
+    /* background-color: #fff; */
+    padding: 20px;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 20%;
+    margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.poster{
+    height: 300px;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.8s ease; 
+}
+
+.poster:hover{
+    transform: scale(1.05); 
+}
+/* 
+.filme-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+} */
+
+.filmes-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    align-items: flex-start; /* Ajusta alinhamento vertical */
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha */
+    gap: 19rem;
+}
+
+.filme-item {
+    flex: 1 1 30%; /* Isso vai garantir que cada item ocupe no máximo 30% da largura da linha */
+    max-width: 300px; /* Limita a largura máxima de cada item */
+    box-sizing: border-box; /* Garante que o padding e border não afetem a largura */
+    margin-bottom: 3rem;
+}
+
+.serie-item{
+    flex: 1 1 30%; /* Isso vai garantir que cada item ocupe no máximo 30% da largura da linha */
+    max-width: 300px; /* Limita a largura máxima de cada item */
+    box-sizing: border-box; /* Garante que o padding e border não afetem a largura */
+    margin-bottom: 3rem;
+}
+
+.series-container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    align-items: flex-start; /* Ajusta alinhamento vertical */
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha */
+    gap: 19rem;
+}
+
+
+.btn-topo {
+    position: fixed;
+    font-size: 2rem;
+    bottom: 20px;
+    right: 25px;
+    background-color: #2a4d69;
+    color: white;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 90%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: color 0s ease, transform 0.35s ease;
+    z-index: 1000;
+}
+.btn-topo:hover {
+    background-color: #1a2c3d;
+    transform: scale(1.15); 
+}
